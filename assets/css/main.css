@@ -6,7 +6,8 @@ body {
   width: 90vw;
   margin: 0 auto;
   background-image: url("/assets/img/45degreee_fabric.png");
-  color: #121212;
+  background-color: #F2F2F2;
+  color: #383838;
   font-family: "Poppins", sans-serif;
 }
 body header {
@@ -68,7 +69,7 @@ body footer {
 body footer a {
   text-decoration: none;
   font-size: small;
-  color: #121212;
+  color: #383838;
 }
 body footer a:hover {
   color: rgb(153, 153, 153);
