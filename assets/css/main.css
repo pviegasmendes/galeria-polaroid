@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Square+Peg&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 90vw;
+  margin: 0 auto;
+  background-image: url("/assets/img/45degreee_fabric.png");
+  color: #121212;
+  font-family: "Poppins", sans-serif;
+}
+body header {
+  background-color: aliceblue;
+  display: inline-block;
+  margin: 10px 0;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+body main .container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+@media all and (min-width: 1200px) {
+  body main .container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media all and (min-width: 960px) and (max-width: 1199px) {
+  body main .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media all and (min-width: 768px) and (max-width: 959px) {
+  body main .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  body main .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+body main .container .polaroid {
+  background-color: aliceblue;
+  border-radius: 3px;
+  padding: 8px;
+  transform: rotate(1.5deg);
+  transition: all 0.2s ease-out;
+}
+body main .container .polaroid:hover {
+  transform: rotate(-1deg) scale(1.1);
+}
+body main .container .polaroid a img {
+  width: 100%;
+}
+body main .container .polaroid h2 {
+  font-size: 36px;
+  font-family: "Square Peg", cursive;
+  display: inline;
+  margin-left: 20px;
+}
+body footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body footer a {
+  text-decoration: none;
+  font-size: small;
+  color: #121212;
+}
+body footer a:hover {
+  color: rgb(153, 153, 153);
+}
+body footer ul {
+  display: flex;
+}
+body footer ul li {
+  list-style: none;
+  margin: 10px;
+}
+body footer ul li img {
+  width: 24px;
+}
+body footer ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=main.css.map */
