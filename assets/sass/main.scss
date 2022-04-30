@@ -1,7 +1,6 @@
-$colorTexto: #3A3845;
-$colorFondo: #F7CCAC;
-$colorPolaroid: #F2F2F2;
-
+$colorTexto: #3a3845;
+$colorFondo: #f7ccac;
+$colorPolaroid: #f2f2f2;
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Square+Peg&display=swap");
 
@@ -15,85 +14,97 @@ body {
   background-color: $colorFondo;
   color: $colorTexto;
   font-family: "Poppins", sans-serif;
-  header {
-    background-color: $colorPolaroid;
-    display: inline-block;
-    margin: 10px 0;
-    padding: 0 20px;
-    border-radius: 5px;
-  }
-  main {
-    .container {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 20px;
-      @media all and (min-width:1200px){ 
-        grid-template-columns: repeat(6, 1fr);
-       }
-      @media all and (min-width: 960px) and (max-width: 1199px) { 
-        grid-template-columns: repeat(4, 1fr);
-       }
-      @media all and (min-width: 768px) and (max-width: 959px) { 
-        grid-template-columns: repeat(3, 1fr);
-       }
-      @media all and (min-width: 480px) and (max-width: 767px){ 
-        grid-template-columns: repeat(2, 1fr);
-       }
-      .polaroid {
-        background-color: $colorPolaroid;
-        border-radius: 3px;
-        padding: 8px;
-        transform: rotate(1.5deg);
-        transition: all 0.2s ease-out;
-        &:hover {
-          transform: rotate(-1deg) scale(1.1);
-        }
-        a {
-          img {
-            width: 100%;
-          }
-        }
-        h2 {
-          font-size: 36px;
-          font-family: "Square Peg", cursive;
-          display: inline;
-          margin-left: 20px;
-        }
-      }
+}
+header {
+  background-color: $colorPolaroid;
+  display: inline-block;
+  margin: 10px 0;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+main {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    @media all and (min-width: 1200px) {
+      grid-template-columns: repeat(6, 1fr);
     }
-  }
-  footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    a {
-      text-decoration: none;
-      font-size: small;
-      color: $colorTexto;
+    @media all and (min-width: 960px) and (max-width: 1199px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media all and (min-width: 768px) and (max-width: 959px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media all and (min-width: 480px) and (max-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .polaroid {
+      background-color: $colorPolaroid;
+      border-radius: 3px;
+      padding: 8px;
+      transform: rotate(1.5deg);
+      transition: all 0.2s ease-out;
       &:hover {
-        color: rgb(153, 153, 153);
+        transform: rotate(-1deg) scale(1.1);
+        box-shadow: 5px 5px 15px 5px rgba(18,18,18,0.16);
+      }
+      a {
+        img {
+          width: 100%;
+        }
+      }
+      h2 {
+        font-size: 36px;
+        font-family: "Square Peg", cursive;
+        display: inline;
+        margin-left: 20px;
       }
     }
-    ul {
-      display: flex;
-      li {
-        list-style: none;
-        margin: 10px;
-        img {
-          width: 24px;
-        }
-        a {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+  }
+  .modal {
+    display: none;
+  }
+  .active {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #121212;
+    width: 100vw;
+    height: 100vh;
+    img {
+      width: 70%;
+      margin: auto;
+    }
+  }
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+    font-size: small;
+    color: $colorTexto;
+    &:hover {
+      color: rgb(153, 153, 153);
+    }
+  }
+  ul {
+    display: flex;
+    li {
+      list-style: none;
+      margin: 10px;
+      img {
+        width: 24px;
+      }
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
 }
-
-
-
-
-
